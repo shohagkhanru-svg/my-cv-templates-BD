@@ -1,213 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Career Solution BD</title>
+<title>Career Solution BD - Final Dynamic Premium</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:'Segoe UI',sans-serif}
-body{background:#f4f7fb;color:#222}
-nav{position:sticky;top:0;z-index:1000;background:#0f172a;padding:16px 25px;display:flex;justify-content:space-between;align-items:center}
-.logo{color:#fff;font-size:24px;font-weight:700}
-.menu a{color:#fff;text-decoration:none;margin-left:20px;position:relative}
-.menu a:hover{color:#93c5fd}
-.menu a:after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#93c5fd;transition:.3s}
-.menu a:hover:after{width:100%}
-
-.hero{
-background:linear-gradient(-45deg,#0f172a,#2563eb,#1d4ed8,#0ea5e9);
-background-size:400% 400%;
-animation:gradient 12s ease infinite;
-color:#fff;text-align:center;padding:110px 20px
-}
-@keyframes gradient{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
-
-.hero h1{font-size:52px;margin-bottom:15px}
-.hero p{max-width:850px;margin:auto;font-size:18px}
-
-.section{max-width:1200px;margin:auto;padding:70px 20px}
-.section h2{text-align:center;margin-bottom:30px;color:#0f172a}
-
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif;scroll-behavior:smooth}
+body{background:#f4f8ff;color:#222}
+body:before{content:'';position:fixed;inset:0;background:linear-gradient(-45deg,#dbeafe,#eff6ff,#e0f2fe,#dbeafe);background-size:400% 400%;animation:bg 15s ease infinite;z-index:-1}
+@keyframes bg{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+nav{position:sticky;top:0;background:#0f172a;padding:15px 25px;display:flex;justify-content:space-between;align-items:center;z-index:1000}
+.logo{display:flex;align-items:center;gap:14px;color:#fff;font-size:30px;font-weight:700}
+.logo img{width:72px;height:72px;border-radius:50%;background:#fff;padding:5px}
+.menu a{color:#fff;text-decoration:none;margin-left:18px}
+.hero{padding:120px 20px;text-align:center;color:#fff;background:linear-gradient(-45deg,#0f172a,#2563eb,#0ea5e9,#1d4ed8);background-size:400% 400%;animation:bg 12s ease infinite}
+.hero h1{font-size:58px;animation:glow 3s infinite}
+@keyframes glow{50%{text-shadow:0 0 20px #fff,0 0 40px #60a5fa}}
+.section{max-width:1300px;margin:auto;padding:70px 20px}
+.title{text-align:center;margin-bottom:25px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:30px}
+.cv{padding:14px;border-radius:20px;background:linear-gradient(white,white) padding-box,linear-gradient(135deg,#111827,#2563eb) border-box;border:2px solid transparent;box-shadow:0 18px 40px rgba(0,0,0,.12);animation:float 5s ease-in-out infinite;transition:.4s}
+@keyframes float{50%{transform:translateY(-8px)}}
+.cv:hover{transform:translateY(-12px) scale(1.03)}
+.cv img{width:100%;height:320px;object-fit:cover;border-radius:12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-
-.card,.template{
-background:#fff;border-radius:18px;padding:25px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-transition:.35s;
-animation:fadeup .8s ease;
-}
-.card:hover,.template:hover{
-transform:translateY(-8px)
-}
-@keyframes fadeup{
-from{opacity:0;transform:translateY(30px)}
-to{opacity:1;transform:translateY(0)}
-}
-
-.template-wrap{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-}
-.template{padding:0;overflow:hidden}
-.template img{width:100%;height:420px;object-fit:cover}
-.template h3{text-align:center;padding:15px}
-
-.contact{
-background:#0f172a;color:#fff;
-text-align:center;padding:70px 20px
-}
-.contact a{color:#93c5fd;text-decoration:none}
-
-.footer{
-background:#020617;color:#bbb;
-text-align:center;padding:15px
-}
-
-.highlight{
-background:#eaf2ff;
-border-left:5px solid #2563eb;
-padding:15px;border-radius:10px;margin-top:15px
-}
-
-@media(max-width:768px){
-nav{flex-direction:column}
-.menu{margin-top:10px}
-.menu a{display:inline-block;margin:6px}
-.hero h1{font-size:34px}
-}
+.card{background:#fff;padding:25px;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.contact{background:#0f172a;color:#fff;text-align:center;padding:70px 20px}
+.footer{background:linear-gradient(135deg,#020617,#0f172a);color:#fff;text-align:center;padding:60px 20px}
+.footer img{width:100px;height:100px;border-radius:50%;background:#fff;padding:6px;margin-bottom:15px}
+.whatsapp{position:fixed;right:20px;bottom:20px;background:#25D366;color:#fff;text-decoration:none;padding:14px 18px;border-radius:50px;font-weight:bold}
+@media(max-width:768px){.hero h1{font-size:36px}nav{flex-direction:column}.menu{margin-top:10px}.logo img{width:60px;height:60px}}
 </style>
 </head>
 <body>
 
 <nav>
-<div class="logo">Career Solution BD</div>
+<div class="logo"><img src="images/logo.png"><span>Career Solution BD</span></div>
 <div class="menu">
 <a href="#home">Home</a>
+<a href="#templates">CV Designs</a>
 <a href="#tips">Career Tips</a>
-<a href="#templates">CV Templates</a>
-<a href="#contact">Contact Us</a>
+<a href="#contact">Contact</a>
 </div>
 </nav>
 
 <section class="hero" id="home">
 <h1>Career Solution BD</h1>
-<p>Professional CV Support, Career Development Guidance, Interview Preparation & Career Resources.</p>
-</section>
-
-<section class="section">
-<h2>Career Development Advice</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>ক্যারিয়ার পরিকল্পনা করুন</h3>
-<p>শুধু চাকরি খোঁজার দিকে নয়, ২-৫ বছরের ক্যারিয়ার লক্ষ্য ঠিক করুন এবং সেই অনুযায়ী দক্ষতা বাড়ান।</p>
-</div>
-
-<div class="card">
-<h3>ভালো CV তৈরি করুন</h3>
-<p>একটি পরিষ্কার, ATS Friendly এবং Professional CV নিয়োগকর্তার কাছে আপনার প্রথম পরিচয়।</p>
-</div>
-
-<div class="card">
-<h3>নতুন Skills শিখুন</h3>
-<p>MS Office, Communication, English, LinkedIn এবং Industry Related Skills শিখুন।</p>
-</div>
-
-<div class="card">
-<h3>নিজেকে আপডেট রাখুন</h3>
-<p>নিয়মিত চাকরির বাজার, নতুন প্রযুক্তি এবং Career Trends সম্পর্কে জানুন।</p>
-</div>
-
-</div>
-
-<div class="highlight">
-<b>Recommendation:</b> প্রতি ৩-৬ মাসে একবার CV Update করুন এবং প্রতিটি Job Application অনুযায়ী CV Customize করুন।
-</div>
-
-</section>
-
-<section class="section" id="tips">
-<h2>Career Tips</h2>
-
-<div class="grid">
-
-<div class="card">
-<h3>Interview Guidelines</h3>
-<p>ইন্টারভিউর আগে কোম্পানি সম্পর্কে জানুন, আত্মবিশ্বাসী থাকুন এবং সময়মতো উপস্থিত হন।</p>
-</div>
-
-<div class="card">
-<h3>Common CV Mistakes</h3>
-<p>বানান ভুল, অপ্রয়োজনীয় তথ্য, ভুল মোবাইল নম্বর এবং অস্পষ্ট ফরম্যাট এড়িয়ে চলুন।</p>
-</div>
-
-<div class="card">
-<h3>Professional Email</h3>
-<p>চাকরির আবেদনে Professional Email ব্যবহার করুন এবং Subject Line পরিষ্কার রাখুন।</p>
-</div>
-
-<div class="card">
-<h3>Job Application Tips</h3>
-<p>প্রতিটি চাকরির জন্য Skills ও Experience Highlight করে CV পাঠান।</p>
-</div>
-
-<div class="card">
-<h3>Body Language</h3>
-<p>ইন্টারভিউতে চোখে চোখ রেখে কথা বলুন, হাসিমুখে থাকুন এবং ভদ্র আচরণ করুন।</p>
-</div>
-
-<div class="card">
-<h3>Follow Up</h3>
-<p>ইন্টারভিউর পর প্রয়োজন হলে Professional Follow-up Email পাঠাতে পারেন।</p>
-</div>
-
-</div>
+<p>Professional CV Design Collection, Career Guidance, Interview Preparation & Modern Career Development Resources.</p>
 </section>
 
 <section class="section" id="templates">
-<h2>CV Templates</h2>
+<h2 class="title">CV Design Collection</h2>
+<div class="gallery">
+<a class="cv" href="images/cv1.png" target="_blank"><img src="images/cv1.png"></a>
+<a class="cv" href="images/cv2.png" target="_blank"><img src="images/cv2.png"></a>
+<a class="cv" href="images/cv3.png" target="_blank"><img src="images/cv3.png"></a>
+<a class="cv" href="images/cv4.png" target="_blank"><img src="images/cv4.png"></a>
+<a class="cv" href="images/cv5.png" target="_blank"><img src="images/cv5.png"></a>
+<a class="cv" href="images/cv6.png" target="_blank"><img src="images/cv6.png"></a>
+<a class="cv" href="images/cv7.png" target="_blank"><img src="images/cv7.png"></a>
+<a class="cv" href="images/cv8.png" target="_blank"><img src="images/cv8.png"></a>
+<a class="cv" href="images/cv9.png" target="_blank"><img src="images/cv9.png"></a>
+<a class="cv" href="images/cv10.png" target="_blank"><img src="images/cv10.png"></a>
+<a class="cv" href="images/cv11.png" target="_blank"><img src="images/cv11.png"></a>
+<a class="cv" href="images/cv12.png" target="_blank"><img src="images/cv12.png"></a>
+<a class="cv" href="images/cv13.png" target="_blank"><img src="images/cv13.png"></a>
+<a class="cv" href="images/cv14.png" target="_blank"><img src="images/cv14.png"></a>
+<a class="cv" href="images/cv15.png" target="_blank"><img src="images/cv15.png"></a>
+<a class="cv" href="images/cv16.png" target="_blank"><img src="images/cv16.png"></a>
+<a class="cv" href="images/cv17.png" target="_blank"><img src="images/cv17.png"></a>
 
-<div class="template-wrap">
-
-<div class="template">
-<img src="images/cv1.jpg" alt="CV Template">
-<h3>Professional CV Template</h3>
 </div>
+</section>
 
-<div class="template">
-<img src="images/cv2.jpg" alt="CV Template">
-<h3>Modern CV Template</h3>
+<section class="section" id="tips">
+<h2 class="title">Career Tips</h2>
+<div class="grid">
+<div class="card"><h3>Professional CV</h3><p>পরিষ্কার ও প্রাসঙ্গিক তথ্য ব্যবহার করুন।</p></div>
+<div class="card"><h3>Interview Skills</h3><p>আত্মবিশ্বাসের সাথে কথা বলুন এবং কোম্পানি সম্পর্কে জানুন।</p></div>
+<div class="card"><h3>Skill Development</h3><p>নিয়মিত নতুন দক্ষতা অর্জন করুন।</p></div>
+<div class="card"><h3>Career Growth</h3><p>দীর্ঘমেয়াদী পরিকল্পনা তৈরি করুন।</p></div>
+<div class="card"><h3>Communication</h3><p>পেশাদার যোগাযোগ বজায় রাখুন।</p></div>
+<div class="card"><h3>Common Mistakes</h3><p>বানান ভুল ও অগোছালো CV এড়িয়ে চলুন।</p></div>
 </div>
-
-<div class="template">
-<img src="images/cv3.jpg" alt="CV Template">
-<h3>Executive CV Template</h3>
-</div>
-
-</div>
-
-<div class="highlight">
-আপনি যত খুশি Template যোগ করতে পারবেন। শুধু cv4.jpg, cv5.jpg ইত্যাদি ছবি images ফোল্ডারে রাখুন এবং একই Template Block Copy করুন।
-</div>
-
 </section>
 
 <section class="contact" id="contact">
 <h2>Contact Us</h2>
-<p><b>Phone:</b> <a href="tel:01301879542">01301879542</a></p>
-<br>
-<p><b>Email:</b> <a href="mailto:shohagkhan.ru@gmail.com">shohagkhan.ru@gmail.com</a></p>
+<p>Phone: 01301879542</p>
+<p>Email: shohagkhan.ru@gmail.com</p>
 </section>
 
-<div class="footer">
-© 2026 Career Solution BD | All Rights Reserved
-</div>
+<footer class="footer">
+<img src="images/logo.png">
+<h2>Career Solution BD</h2>
+<p>Your Reliable Career Development Partner</p>
+<p>Professional CV Design • Career Guidance • Interview Preparation</p>
+<p>Phone: 01301879542 | Email: shohagkhan.ru@gmail.com</p>
+<p style="margin-top:15px">© 2026 Career Solution BD. All Rights Reserved.</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/8801301879542" target="_blank">WhatsApp</a>
 
 </body>
 </html>
