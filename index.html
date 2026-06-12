@@ -4,173 +4,210 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Career Solution BD</title>
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:'Segoe UI',sans-serif}
+body{background:#f4f7fb;color:#222}
+nav{position:sticky;top:0;z-index:1000;background:#0f172a;padding:16px 25px;display:flex;justify-content:space-between;align-items:center}
+.logo{color:#fff;font-size:24px;font-weight:700}
+.menu a{color:#fff;text-decoration:none;margin-left:20px;position:relative}
+.menu a:hover{color:#93c5fd}
+.menu a:after{content:'';position:absolute;left:0;bottom:-5px;width:0;height:2px;background:#93c5fd;transition:.3s}
+.menu a:hover:after{width:100%}
+
+.hero{
+background:linear-gradient(-45deg,#0f172a,#2563eb,#1d4ed8,#0ea5e9);
+background-size:400% 400%;
+animation:gradient 12s ease infinite;
+color:#fff;text-align:center;padding:110px 20px
+}
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
 }
 
-body{
-    background:#f4f7fc;
+.hero h1{font-size:52px;margin-bottom:15px}
+.hero p{max-width:850px;margin:auto;font-size:18px}
+
+.section{max-width:1200px;margin:auto;padding:70px 20px}
+.section h2{text-align:center;margin-bottom:30px;color:#0f172a}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+
+.card,.template{
+background:#fff;border-radius:18px;padding:25px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:.35s;
+animation:fadeup .8s ease;
+}
+.card:hover,.template:hover{
+transform:translateY(-8px)
+}
+@keyframes fadeup{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
 }
 
-header{
-    background:linear-gradient(135deg,#0f172a,#2563eb);
-    color:white;
-    text-align:center;
-    padding:60px 20px;
+.template-wrap{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
-
-header h1{
-    font-size:40px;
-    margin-bottom:10px;
-}
-
-header p{
-    opacity:.9;
-}
-
-.templates{
-    max-width:1200px;
-    margin:40px auto;
-    padding:0 20px;
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.card img{
-    width:100%;
-    height:380px;
-    object-fit:cover;
-}
-
-.content{
-    padding:18px;
-}
-
-.content h3{
-    margin-bottom:10px;
-}
-
-.content p{
-    color:#555;
-    font-size:14px;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:15px;
-    text-decoration:none;
-    background:#2563eb;
-    color:white;
-    padding:10px 20px;
-    border-radius:8px;
-}
-
-.about{
-    background:white;
-    max-width:1200px;
-    margin:40px auto;
-    padding:40px 20px;
-    text-align:center;
-    border-radius:15px;
-}
+.template{padding:0;overflow:hidden}
+.template img{width:100%;height:420px;object-fit:cover}
+.template h3{text-align:center;padding:15px}
 
 .contact{
-    background:#0f172a;
-    color:white;
-    text-align:center;
-    padding:50px 20px;
+background:#0f172a;color:#fff;
+text-align:center;padding:70px 20px
+}
+.contact a{color:#93c5fd;text-decoration:none}
+
+.footer{
+background:#020617;color:#bbb;
+text-align:center;padding:15px
 }
 
-.contact a{
-    color:#60a5fa;
-    text-decoration:none;
+.highlight{
+background:#eaf2ff;
+border-left:5px solid #2563eb;
+padding:15px;border-radius:10px;margin-top:15px
 }
 
-footer{
-    background:#020617;
-    color:#aaa;
-    text-align:center;
-    padding:15px;
+@media(max-width:768px){
+nav{flex-direction:column}
+.menu{margin-top:10px}
+.menu a{display:inline-block;margin:6px}
+.hero h1{font-size:34px}
 }
 </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Career Solution BD</h1>
-    <p>Professional CV & Resume Templates</p>
-</header>
+<nav>
+<div class="logo">Career Solution BD</div>
+<div class="menu">
+<a href="#home">Home</a>
+<a href="#tips">Career Tips</a>
+<a href="#templates">CV Templates</a>
+<a href="#contact">Contact Us</a>
+</div>
+</nav>
 
-<section class="templates">
+<section class="hero" id="home">
+<h1>Career Solution BD</h1>
+<p>Professional CV Support, Career Development Guidance, Interview Preparation & Career Resources.</p>
+</section>
 
-    <div class="card">
-        <img src="images/cv1.jpg" alt="CV Template">
-        <div class="content">
-            <h3>Professional CV</h3>
-            <p>Suitable for corporate and office jobs.</p>
-            <a href="#" class="btn">View</a>
-        </div>
-    </div>
+<section class="section">
+<h2>Career Development Advice</h2>
 
-    <div class="card">
-        <img src="images/cv2.jpg" alt="CV Template">
-        <div class="content">
-            <h3>Modern Resume</h3>
-            <p>Clean and attractive design.</p>
-            <a href="#" class="btn">View</a>
-        </div>
-    </div>
+<div class="grid">
 
-    <div class="card">
-        <img src="images/cv3.jpg" alt="CV Template">
-        <div class="content">
-            <h3>Executive CV</h3>
-            <p>Best for experienced professionals.</p>
-            <a href="#" class="btn">View</a>
-        </div>
-    </div>
+<div class="card">
+<h3>ক্যারিয়ার পরিকল্পনা করুন</h3>
+<p>শুধু চাকরি খোঁজার দিকে নয়, ২-৫ বছরের ক্যারিয়ার লক্ষ্য ঠিক করুন এবং সেই অনুযায়ী দক্ষতা বাড়ান।</p>
+</div>
+
+<div class="card">
+<h3>ভালো CV তৈরি করুন</h3>
+<p>একটি পরিষ্কার, ATS Friendly এবং Professional CV নিয়োগকর্তার কাছে আপনার প্রথম পরিচয়।</p>
+</div>
+
+<div class="card">
+<h3>নতুন Skills শিখুন</h3>
+<p>MS Office, Communication, English, LinkedIn এবং Industry Related Skills শিখুন।</p>
+</div>
+
+<div class="card">
+<h3>নিজেকে আপডেট রাখুন</h3>
+<p>নিয়মিত চাকরির বাজার, নতুন প্রযুক্তি এবং Career Trends সম্পর্কে জানুন।</p>
+</div>
+
+</div>
+
+<div class="highlight">
+<b>Recommendation:</b> প্রতি ৩-৬ মাসে একবার CV Update করুন এবং প্রতিটি Job Application অনুযায়ী CV Customize করুন।
+</div>
 
 </section>
 
-<section class="about">
-    <h2>Why Choose Our CV Templates?</h2>
-    <br>
-    <p>
-        Professional, ATS Friendly and Modern CV Templates
-        designed to increase your chances of getting interview calls.
-    </p>
+<section class="section" id="tips">
+<h2>Career Tips</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Interview Guidelines</h3>
+<p>ইন্টারভিউর আগে কোম্পানি সম্পর্কে জানুন, আত্মবিশ্বাসী থাকুন এবং সময়মতো উপস্থিত হন।</p>
+</div>
+
+<div class="card">
+<h3>Common CV Mistakes</h3>
+<p>বানান ভুল, অপ্রয়োজনীয় তথ্য, ভুল মোবাইল নম্বর এবং অস্পষ্ট ফরম্যাট এড়িয়ে চলুন।</p>
+</div>
+
+<div class="card">
+<h3>Professional Email</h3>
+<p>চাকরির আবেদনে Professional Email ব্যবহার করুন এবং Subject Line পরিষ্কার রাখুন।</p>
+</div>
+
+<div class="card">
+<h3>Job Application Tips</h3>
+<p>প্রতিটি চাকরির জন্য Skills ও Experience Highlight করে CV পাঠান।</p>
+</div>
+
+<div class="card">
+<h3>Body Language</h3>
+<p>ইন্টারভিউতে চোখে চোখ রেখে কথা বলুন, হাসিমুখে থাকুন এবং ভদ্র আচরণ করুন।</p>
+</div>
+
+<div class="card">
+<h3>Follow Up</h3>
+<p>ইন্টারভিউর পর প্রয়োজন হলে Professional Follow-up Email পাঠাতে পারেন।</p>
+</div>
+
+</div>
 </section>
 
-<section class="contact">
-    <h2>Order Your CV Today</h2>
-    <br>
-    <p>Facebook Page: Career Solution BD</p>
-    <p>WhatsApp: +8801301879542</p>
+<section class="section" id="templates">
+<h2>CV Templates</h2>
+
+<div class="template-wrap">
+
+<div class="template">
+<img src="images/cv1.jpg" alt="CV Template">
+<h3>Professional CV Template</h3>
+</div>
+
+<div class="template">
+<img src="images/cv2.jpg" alt="CV Template">
+<h3>Modern CV Template</h3>
+</div>
+
+<div class="template">
+<img src="images/cv3.jpg" alt="CV Template">
+<h3>Executive CV Template</h3>
+</div>
+
+</div>
+
+<div class="highlight">
+আপনি যত খুশি Template যোগ করতে পারবেন। শুধু cv4.jpg, cv5.jpg ইত্যাদি ছবি images ফোল্ডারে রাখুন এবং একই Template Block Copy করুন।
+</div>
+
 </section>
 
-<footer>
-    © 2026 Career Solution BD | All Rights Reserved
-</footer>
+<section class="contact" id="contact">
+<h2>Contact Us</h2>
+<p><b>Phone:</b> <a href="tel:01301879542">01301879542</a></p>
+<br>
+<p><b>Email:</b> <a href="mailto:shohagkhan.ru@gmail.com">shohagkhan.ru@gmail.com</a></p>
+</section>
+
+<div class="footer">
+© 2026 Career Solution BD | All Rights Reserved
+</div>
 
 </body>
 </html>
